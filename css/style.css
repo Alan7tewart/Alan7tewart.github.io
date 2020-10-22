@@ -303,6 +303,11 @@ body {
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
+	.smart_curs {
+		display: block;
+		font-size: 1.2rem;
+	}
+	.username {display: none;}
 	.username,
 	.funcall {font-size: 1.1rem;}
 	.birthday {font-size: 0.45rem}
