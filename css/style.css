@@ -119,7 +119,7 @@ body {
 
 	font-family: 'Inconsolata', monospace;
 	font-weight: 400;
-	font-size: 0.7rem;
+	font-size: 0.6rem;
 	color: #00ff00;
 }
 
@@ -135,7 +135,7 @@ body {
 
 .happy {
 	margin-right: 3rem;
-	margin-left: 15%;
+	margin-left: 14%;
 }
 
 .name {
@@ -278,7 +278,7 @@ body {
 	}
 	.username {display: none;}
 	.funcall {font-size: 1rem;}
-	.birthday {font-size: 0.4rem}
+	.birthday {font-size: 0.3rem}
 	.birthday {justify-content: center;}
 	.happy,
 	.birt,
@@ -294,7 +294,7 @@ body {
 	}
 	.username {display: none;}
 	.funcall {font-size: 1.1rem;}
-	.birthday {font-size: 0.5rem}
+	.birthday {font-size: 0.4rem}
 	.birthday {justify-content: center;}
 	.happy,
 	.birt,
@@ -305,7 +305,7 @@ body {
 @media screen and (min-width: 481px) and (max-width: 768px) {
 	.username,
 	.funcall {font-size: 1.1rem;}
-	.birthday {font-size: 0.55rem}
+	.birthday {font-size: 0.45rem}
 	.birthday {justify-content: center;}
 	.happy,
 	.birt,
@@ -315,5 +315,5 @@ body {
 @media screen and (min-width: 769px) and (max-width: 1024px) {
 	.username,
 	.funcall {font-size: 1.1rem;}
-	.birthday {font-size: 0.55rem}
+	.birthday {font-size: 0.45rem}
 }
