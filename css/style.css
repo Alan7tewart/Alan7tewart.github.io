@@ -1,0 +1,319 @@
+:root {
+	font-size: 16px;
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	background-color: #000
+}
+
+
+/*-----matrix effect-----------------*/
+#matrixback {
+	width: 100%;
+	height: 100%;
+}
+
+
+/*----------terminal window--------------*/
+.terminal {
+	width: 97%;
+	height: 92%;
+	max-width: 1080px;
+	max-height: 550px;
+	padding: 2.5rem 1.5rem;
+
+	position: absolute;
+  	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+  	-moz-transform: translate(-50%, -50%);
+  	-o-transform: translate(-50%, -50%);
+  	
+  	background-color: rgba(0,0,0,0.85);
+  	border: 1px solid #00ff00;
+}
+
+
+/*---------function callback-------------*/
+.firstline {
+	display: flex;
+}
+
+.smart_curs {
+	display: none;
+}
+
+.username,
+.smart_curs {
+	opacity: 0;
+	padding-right: 1em;
+
+	font-family: 'Inconsolata', monospace;
+	font-weight: 700;
+	font-size: 1.375rem;
+	color: #00ff00;
+}
+
+.firstline > .username,
+.firstline > .smart_curs {
+	animation: show 0s 4.5s 1 forwards;
+	-webkit-animation: show 0s 4.5s 1 forwards;
+	-moz-animation: show 0s 4.5s 1 forwards;
+	-o-animation: show 0s 4.5s 1 forwards;
+} 
+
+.lastline > .username,
+.lastline > .smart_curs {
+	animation: show 0s 19s 1 forwards;
+	-webkit-animation: show 0s 19s 1 forwards;
+	-moz-animation: show 0s 19s 1 forwards;
+	-o-animation: show 0s 19s 1 forwards;
+}
+
+.lastline > .username::after,
+.lastline > .smart_curs::after {
+	content: '';
+	padding-left: 1em;
+	border-right: .4em solid #00ff00;
+
+	animation: blink 1s step-end infinite forwards;
+	-webkit-animation: blink 1s step-end infinite forwards;
+	-moz-animation: blink 1s step-end infinite forwards;
+	-o-animation: blink 1s step-end infinite forwards;
+}
+
+.funcall {
+	display: inline-block;
+	overflow: hidden;
+
+	font-family: 'Inconsolata', monospace;
+	font-weight: 600;
+	font-size: 1.25rem;
+	color: #00ff00;
+	
+	animation: typing_func 3.5s 5s steps(30, end) backwards;
+	-webkit-animation: typing_func 3.5s 5s steps(30, end) backwards;
+	-moz-animation: typing_func 3.5s 5s steps(30, end) backwards;
+	-o-animation: typing_func 3.5s 5s steps(30, end) backwards;
+}
+
+
+/*-----------birthday text-----------------*/
+.birthday {
+	display: flex;
+	flex-wrap: wrap;
+
+	margin: 3rem 0;
+	padding: 1rem 0;
+
+	font-family: 'Inconsolata', monospace;
+	font-weight: 400;
+	font-size: 0.7rem;
+	color: #00ff00;
+}
+
+.birthday pre {
+	margin-top: 2em;
+}
+
+.happy,
+.birt,
+.name {
+	width: max-content;
+}
+
+.happy {
+	margin-right: 3rem;
+	margin-left: 15%;
+}
+
+.name {
+	margin: auto;
+}
+
+.happy > pre {
+	margin-bottom: 0;
+	overflow: hidden;
+
+	animation: typing 2.5s 9s steps(35, end) backwards;
+	-webkit-animation: typing 2.5s 9s steps(35, end) backwards;
+	-moz-animation: typing 2.5s 9s steps(35, end) backwards;
+	-o-animation: typing 2.5s 9s steps(35, end) backwards;
+}
+
+.birt > pre {
+	margin-bottom: 0;
+	overflow: hidden;
+
+	animation: typing 4s 11.5s steps(40, end) backwards;
+	-webkit-animation: typing 4s 11.5s steps(40, end) backwards;
+	-moz-animation: typing 4s 11.5s steps(40, end) backwards;
+	-o-animation: typing 4s 11.5s steps(40, end) backwards;
+}
+
+.name > pre {
+	overflow: hidden;
+
+	animation: typing 3s 15.5s steps(35, end) backwards;
+	-webkit-animation: typing 3s 15.5s steps(35, end) backwards;
+	-moz-animation: typing 3s 15.5s steps(35, end) backwards;
+	-o-animation: typing 3s 15.5s steps(35, end) backwards;
+}
+
+
+/*-------------animation------------------*/
+@keyframes typing_func {
+	from { width: 0 }
+  	to { width: 312px }
+}
+
+@-webkit-keyframes typing_func {
+	from { width: 0 }
+  	to { width: 312px }
+}
+
+@-moz-keyframes typing_func {
+	from { width: 0 }
+  	to { width: 312px }
+}
+
+@-o-keyframes typing_func {
+	from { width: 0 }
+  	to { width: 312px }
+}
+
+
+
+@keyframes typing {
+	from { width: 0 }
+  	to { width: 100% }
+}
+
+@-webkit-keyframes typing {
+	from { width: 0 }
+  	to { width: 100% }
+}
+
+@-moz-keyframes typing {
+	from { width: 0 }
+  	to { width: 100% }
+}
+
+@-o-keyframes typing {
+	from { width: 0 }
+  	to { width: 100% }
+}
+
+
+@keyframes blink {
+  from { border-color: transparent }
+  40% { border-color: transparent }
+  50% { border-color: #00ff00 }
+  90% { border-color: #00ff00 }
+  to { border-color: transparent }
+}
+
+@-webkit-keyframes blink {
+  from { border-color: transparent }
+  40% { border-color: transparent }
+  50% { border-color: #00ff00 }
+  90% { border-color: #00ff00 }
+  to { border-color: transparent }
+}
+
+@-moz-keyframes blink {
+  from { border-color: transparent }
+  40% { border-color: transparent }
+  50% { border-color: #00ff00 }
+  90% { border-color: #00ff00 }
+  to { border-color: transparent }
+}
+
+@-o-keyframes blink {
+  from { border-color: transparent }
+  40% { border-color: transparent }
+  50% { border-color: #00ff00 }
+  90% { border-color: #00ff00 }
+  to { border-color: transparent }
+}
+
+
+@keyframes show {
+	from {opacity: 0}
+	to {opacity: 1}
+}
+
+@-webkit-keyframes show {
+	from {opacity: 0}
+	to {opacity: 1}
+}
+
+@-moz-keyframes show {
+	from {opacity: 0}
+	to {opacity: 1}
+}
+
+@-o-keyframes show {
+	from {opacity: 0}
+	to {opacity: 1}
+}
+
+
+/*-------------------media-------------------------------*/
+@media screen and (max-width: 360px) {
+	.smart_curs {
+		display: block;
+		font-size: 1.2rem;
+	}
+	.username {display: none;}
+	.funcall {font-size: 1rem;}
+	.birthday {font-size: 0.4rem}
+	.birthday {justify-content: center;}
+	.happy,
+	.birt,
+	.name {margin: 0;}
+
+}
+
+
+@media screen and (min-width: 361px) and (max-width: 480px) {
+	.smart_curs {
+		display: block;
+		font-size: 1.2rem;
+	}
+	.username {display: none;}
+	.funcall {font-size: 1.1rem;}
+	.birthday {font-size: 0.5rem}
+	.birthday {justify-content: center;}
+	.happy,
+	.birt,
+	.name {margin: 0;}
+
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+	.username,
+	.funcall {font-size: 1.1rem;}
+	.birthday {font-size: 0.55rem}
+	.birthday {justify-content: center;}
+	.happy,
+	.birt,
+	.name {margin: 0;}
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+	.username,
+	.funcall {font-size: 1.1rem;}
+	.birthday {font-size: 0.55rem}
+}
